@@ -1,28 +1,37 @@
 {
-  "name": "tech-blog",
-  "version": "1.0.0",
+  "name": "gatsby-example-using-markdown-pages",
   "private": true,
-  "description": "tech-blog",
-  "author": "sou",
+  "description": "Start your new blog using markdown files",
+  "version": "0.1.0",
+  "author": "@gatsbyjs",
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-image": "next",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sharp": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
+    "gatsby-transformer-sharp": "next",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "2.1.1"
+  },
   "keywords": [
     "gatsby"
   ],
+  "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "gatsby": "^4.12.1",
-    "gatsby-plugin-postcss": "^5.12.1",
-    "gatsby-plugin-react-helmet": "^5.12.1",
-    "gatsby-source-filesystem": "^4.12.1",
-    "gatsby-transformer-remark": "^5.12.1",
-    "postcss": "^8.4.12",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   }
 }
