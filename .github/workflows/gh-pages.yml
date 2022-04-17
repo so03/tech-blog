@@ -21,16 +21,17 @@ jobs:
 
       - name: Cache dependencies
         uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
 
-      - run: npm ci
-      - run: npm run format
-      - run: npm run test
-      - run: npm run build
+      - run: yarn
+      - run: yarn format
+      - run: yarn test
+      - run: yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
