@@ -3,5 +3,6 @@ module.exports = {
     title: `tech blog`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-react-helmet"]
+  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-react-helmet"],
+  pathPrefix: `/tech-blog`
 };
